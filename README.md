@@ -4,7 +4,7 @@ This is an action for GitHub Actions. It runs `xmllint` on each listed ruleset f
 
 ```yaml
     - name: "Validate ruleset"
-      uses: "actions/validate-phpcs-rulesets"
+      uses: "szepeviktor/phpcs-ruleset-validator@v0.1.0"
       with:
         xml_ruleset: "RulesetName/ruleset.xml"
 ```
