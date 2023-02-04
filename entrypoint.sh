@@ -5,8 +5,11 @@
 
 set -e
 
+# Default PHPCS schema path: vendor/squizlabs/php_codesniffer/phpcs.xsd
 PHPCS_SCHEMA="${INPUT_XML_PHPCS_SCHEMA:-vendor/squizlabs/php_codesniffer/phpcs.xsd}"
+# Default indentation: 4 spaces
 XMLLINT_INDENT="${INPUT_XMLLINT_INDENT:-    }"
+export XMLLINT_INDENT
 
 if [ -z "${!INPUT_*}" ]; then
     echo "No ruleset files specified!"
@@ -23,6 +26,6 @@ for INPUT in "${!INPUT_@}"; do
     fi
 
     xmllint --noout --schema "${PHPCS_SCHEMA}" "${!INPUT}"
-    # Indentation: 4 spaces
-    diff --ignore-blank-lines --unified "${!INPUT}" <(xmllint --format "${!INPUT}")
+    # Allow extra blank lines
+    diff --ignore-blank-lines "${!INPUT}" <(xmllint --format "${!INPUT}") | cat --show-all
 done
