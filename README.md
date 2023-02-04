@@ -10,4 +10,6 @@ This is an action for GitHub Actions. It runs `xmllint` on each listed ruleset f
 ```
 
 You can use any key in `with`.
-There is one special key for non-default PHPCS shema path: `xml_phpcs_schema`.
+There are two special keys
+1. for non-default PHPCS shema path: `xml_phpcs_schema`
+2. and for XML file indentation string: `xmllint_indent`

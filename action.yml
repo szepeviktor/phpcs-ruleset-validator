@@ -6,6 +6,8 @@ runs:
 inputs:
     xml_phpcs_schema:
         description: "Optional PHPCS schema path"
+    xmllint_indent:
+        description: "Whitespaces used for XML file indentation"
     xml_ruleset:
         description: "Ruleset file path"
     xml_ruleset2:
