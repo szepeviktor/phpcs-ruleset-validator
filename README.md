@@ -1,10 +1,10 @@
 # Validate PHPCS rulesets
 
-This is an action for GitHub Actions. It runs `xmllint` on each listed ruleset files.
+This is an action for GitHub Actions. It runs `xmllint` on each listed ruleset file.
 
 ```yaml
     - name: "Validate ruleset"
-      uses: "./.github/actions/phpcs-ruleset-validate"
+      uses: "actions/validate-phpcs-rulesets"
       with:
         xml_ruleset: "RulesetName/ruleset.xml"
 ```
