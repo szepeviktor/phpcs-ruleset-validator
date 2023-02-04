@@ -3,7 +3,7 @@
 # Validate PHPCS rulesets.
 #
 
-set -e
+set -e -o pipefail
 
 # Default PHPCS schema path: vendor/squizlabs/php_codesniffer/phpcs.xsd
 PHPCS_SCHEMA="${INPUT_XML_PHPCS_SCHEMA:-vendor/squizlabs/php_codesniffer/phpcs.xsd}"
