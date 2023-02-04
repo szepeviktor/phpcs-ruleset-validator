@@ -12,3 +12,6 @@ inputs:
         description: "Optional ruleset file path"
     xml_ruleset3:
         description: "Optional ruleset file path"
+branding:
+  icon: "book-open"
+  color: "purple"
