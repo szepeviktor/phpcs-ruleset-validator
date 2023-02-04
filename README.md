@@ -4,7 +4,7 @@ This is an action for GitHub Actions. It runs `xmllint` on each listed ruleset f
 
 ```yaml
     - name: "Validate ruleset"
-      uses: "szepeviktor/phpcs-ruleset-validator@v0.3.0"
+      uses: "szepeviktor/phpcs-ruleset-validator@v0.4.0"
       with:
         # When you indent with tabs
         # xmllint_indent: "\t"
