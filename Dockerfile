@@ -1,7 +1,7 @@
 # https://hub.docker.com/_/debian
 FROM debian:bullseye-slim
 
-LABEL org.opencontainers.image.title="PHP ruleset validator"
+LABEL org.opencontainers.image.title="PHPCS ruleset validator"
 
 ENV LC_ALL="C.UTF-8"
 ENV DEBIAN_FRONTEND="noninteractive"
